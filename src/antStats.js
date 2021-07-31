@@ -22,7 +22,6 @@ export function antStats(host = { name: '', ip: '0.0.0.0', port: 4028 }) {
         worker: host.name,
         ip: host.ip,
         online: false,
-        timestamp: new Date().valueOf(),
         farm: FARM.id,
         stats: null
       });
@@ -43,7 +42,6 @@ export function antStats(host = { name: '', ip: '0.0.0.0', port: 4028 }) {
             worker: host.name,
             ip: host.ip,
             online: true,
-            timestamp: new Date().valueOf(),
             farm: FARM.id,
             stats: json
           });
