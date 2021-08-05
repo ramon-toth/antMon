@@ -5,6 +5,7 @@ import { io } from 'socket.io-client';
 const socket = io(SERVER);
 
 socket.emit('farm', FARM);
+socket.on('connect', () => console.log('Connected to Server at', SERVER))
 
 socket.on('command', (data) => {
   console.log('Command from server:', data);

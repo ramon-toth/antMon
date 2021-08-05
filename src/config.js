@@ -1,6 +1,6 @@
-export const SERVER = 'ws://76.66.102.73:3033';
+export const SERVER = 'ws://heliosproject.ca:3033';
 
-export const INTERVAL = 10;
+export const INTERVAL = 60;
 
 export const FARM = { name: 'Office', id: 1 };
 
