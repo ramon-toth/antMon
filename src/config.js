@@ -45,10 +45,4 @@ export const WORKERS = [
     ip: '192.168.1.11',
     port: 4028
   },
-  {
-    name: 'Worker7 DOES NOT EXIST',
-    workerID: 7,
-    ip: '192.168.1.18',
-    port: 4028
-  }
 ];
