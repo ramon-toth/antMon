@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export const SERVER = process.env.SERVER;
 
 export const INTERVAL = process.env.UPDATE_INTERVAL;
