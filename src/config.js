@@ -1,6 +1,6 @@
-export const SERVER = 'ws://heliosproject.ca:3033';
+export const SERVER = process.env.SERVER;
 
-export const INTERVAL = 60;
+export const INTERVAL = process.env.UPDATE_INTERVAL;
 
 export const FARM = { name: 'Office', id: 1 };
 

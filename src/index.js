@@ -1,15 +1,22 @@
 import { antStats } from './antStats.js';
 import { WORKERS, SERVER, INTERVAL, FARM } from './config.js';
 import { io } from 'socket.io-client';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const socket = io(SERVER);
 
+socket.emit('auth', process.env.API_KEY);
+
 socket.emit('farm', FARM);
-socket.on('connect', () => console.log('Connected to Server at', SERVER))
+socket.on('connect', () => console.log('Connected to Server at', SERVER));
 
 socket.on('command', (data) => {
-  console.log('Command from server:', data);
+  console.log('Message from server:', data);
 });
+
+socket.on('disconnect', () => console.log('Server disconnected'));
 
 function fetchAllStats() {
   const stats = WORKERS.map(async (w) => await antStats(w));
