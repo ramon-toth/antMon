@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 3033
 
-CMD [ "node", "src/server.js" ]
+CMD [ "node", "src/index.js" ]
