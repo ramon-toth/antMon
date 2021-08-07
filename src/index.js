@@ -5,9 +5,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const socket = io(SERVER);
+const socket = io(SERVER, { auth: process.env.API_KEY });
 
-socket.emit('auth', process.env.API_KEY);
+// socket.emit('auth', process.env.API_KEY);
 
 socket.emit('farm', FARM);
 socket.on('connect', () => console.log('Connected to Server at', SERVER));
