@@ -12,37 +12,37 @@ export const WORKERS = [
   {
     name: 'Worker1',
     workerID: 1,
-    ip: '192.168.1.6',
+    ip: '192.168.1.3',
     port: 4028
   },
   {
     name: 'Worker2',
     workerID: 2,
-    ip: '192.168.1.7',
+    ip: '192.168.1.4',
     port: 4028
   },
   {
     name: 'Worker3',
     workerID: 3,
-    ip: '192.168.1.8',
+    ip: '192.168.1.5',
     port: 4028
   },
   {
     name: 'Worker4',
     workerID: 4,
-    ip: '192.168.1.9',
+    ip: '192.168.1.6',
     port: 4028
   },
   {
     name: 'Worker5',
     workerID: 5,
-    ip: '192.168.1.10',
+    ip: '192.168.1.7',
     port: 4028
   },
   {
     name: 'Worker6',
     workerID: 6,
-    ip: '192.168.1.11',
+    ip: '192.168.1.8',
     port: 4028
-  },
+  }
 ];
