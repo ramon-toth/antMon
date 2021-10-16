@@ -5,17 +5,17 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const socket = io(SERVER, { auth: {token: process.env.API_KEY} });
+const socket = io(SERVER, { auth: { token: process.env.API_KEY } });
 
 socket.emit('farm', FARM);
 socket.on('connect', () => console.log('Connected to Server at', SERVER));
 
 socket.on('command', (data) => {
-  console.log('Message from server:', data);
+  console.log('Message from server:', data); // Not implemented
 });
 
-socket.on("connect_error", (err) => {
-  console.log('Connection Error'); 
+socket.on('connect_error', (err) => {
+  console.log('Connection Error', err);
 });
 
 socket.on('disconnect', () => console.log('Server disconnected'));

@@ -8,12 +8,6 @@ export function antStats(host = { name: '', ip: '0.0.0.0', port: 4028 }) {
     host: host.ip,
     port: host.port
   });
-  // workerID: 1,
-  // worker: 'Worker6',
-  // ip: '192.168.1.11',
-  // online: true,
-  // timestamp: new Date().valueOf(),
-  // farm: 1,
 
   return new Promise((resolve, reject) => {
     socket.on('error', function (err) {
@@ -25,7 +19,6 @@ export function antStats(host = { name: '', ip: '0.0.0.0', port: 4028 }) {
         farm: FARM.id,
         stats: null
       });
-      // return reject(err);
     });
 
     socket.on('connect', () => {
